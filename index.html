@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="icon" type="image/x-icon" href="logo.png">
-  <title>Vestimentas Loida..</title>
+  <title>Vestimentas Loida</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -21,15 +21,15 @@
       align-items: center;
     }
 
-    .contacto{
-            display: flex;
+    .contacto {
+      display: flex;
       align-items: center;
+      margin: 10px;
     }
 
     .cart {
       background-color: #ecf0f1;
-      padding: 10px;
-      text-align: right;
+      padding: 10px 20px;
       font-size: 16px;
     }
 
@@ -88,6 +88,18 @@
     .buy-btn:hover {
       background-color: #219150;
     }
+
+    footer {
+      background-color: #ccc;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .carrito {
+      padding: 20px;
+      background-color: #fff;
+      text-align: left;
+    }
   </style>
 </head>
 <body>
@@ -95,29 +107,28 @@
   <header>
     <img src="logo.png" style="width: 100px;" alt="logo">
     <div style="width: 100%;">
-    <h1>Vestimentas Loida</h1>
-    <p>Moda de lujo para gustos exigentes</p>
+      <h1>Vestimentas Loida</h1>
+      <p>Moda de lujo para gustos exigentes</p>
     </div>
   </header>
 
+  <div class="cart">
+    <p>Productos en el carrito: <span id="cart-count">0</span></p>
+    <p>Subtotal: $<span id="subtotal">0</span></p>
+    <p>Envío: $<span id="envio">0</span></p>
+    <p><strong>Total: $<span id="total">0</span></strong></p>
+  </div>
 
-
- </div>  <div class="carrito">
-    <h3>Carrito de compras</h3>
-    <ul id="buy-btn"></ul>
-    <p><strong>Subtotal: $<span id="subtotal">0</span></strong></p>
-    <p><strong>Envío: $<span id="envio">0</span></strong></p>
-    <p><strong>Total a pagar: $<span id="total">0</span></strong></p><div id="metodo-pago" style="margin-top: 15px;">
-  <h4>Método de pago</h4>
-  <label><input type="radio" name="pago" value="tarjeta crédito" checked> Tarjeta de Crédito</label>
-  <label><input type="radio" name="pago" value="tarjeta débito"> Tarjeta de Débito</label>
-  <label><input type="radio" name="pago" value="efectivo"> Efectivo</label>
-  <label><input type="radio" name="pago" value="stripe"> Stripe</label>
-</div>
-
+  <div class="carrito" id="metodo-pago">
+    <h4>Método de pago</h4>
+    <label><input type="radio" name="pago" value="tarjeta crédito" checked> Tarjeta de Crédito</label><br>
+    <label><input type="radio" name="pago" value="tarjeta débito"> Tarjeta de Débito</label><br>
+    <label><input type="radio" name="pago" value="efectivo"> Efectivo</label><br>
+    <label><input type="radio" name="pago" value="stripe"> Stripe</label>
+  </div>
 
   <div class="container">
-    <div class="product">    
+    <div class="product">
       <img src="Chaqueta de lujo.png" alt="Chaqueta de Lujo">
       <h3>Chaqueta de Lujo</h3>
       <p>Cuero italiano, edición limitada.</p>
@@ -125,105 +136,96 @@
       <button class="buy-btn" onclick="addToCart(850)">Agregar al carrito</button>
     </div>
 
-
-
     <div class="product">
       <img src="Vestidos de gala.JPG" alt="Vestido de Gala">
       <h3>Vestido de Gala</h3>
-      <p>Hecho a mano, seda natural....................</p>
+      <p>Hecho a mano, seda natural.</p>
       <div class="price">$1300</div>
       <button class="buy-btn" onclick="addToCart(1300)">Agregar al carrito</button>
     </div>
 
-
     <div class="product">
-      <img src="VESTIDO.png" alt="Vestido de Gala">
+      <img src="VESTIDO.png" alt="Vestido">
       <h3>Vestido de Gala</h3>
-      <p>Hecho a mano, seda natural....................</p>
+      <p>Hecho a mano, seda natural.</p>
       <div class="price">$1300</div>
       <button class="buy-btn" onclick="addToCart(1300)">Agregar al carrito</button>
     </div>
 
     <div class="product">
-      <img src="VESTIDO1.png" alt="Vestido de Gala">
+      <img src="VESTIDO1.png" alt="Vestido">
       <h3>Vestido de Gala</h3>
-      <p>Hecho a mano, seda natural....................</p>
+      <p>Hecho a mano, seda natural.</p>
       <div class="price">$1300</div>
       <button class="buy-btn" onclick="addToCart(1300)">Agregar al carrito</button>
     </div>
 
-
     <div class="product">
-      <img src="VESTIDO2.png" alt="Vestido de Gala">
+      <img src="VESTIDO2.png" alt="Vestido">
       <h3>Vestido de Gala</h3>
-      <p>Hecho a mano, seda natural....................</p>
+      <p>Hecho a mano, seda natural.</p>
       <div class="price">$1300</div>
       <button class="buy-btn" onclick="addToCart(1300)">Agregar al carrito</button>
     </div>
 
-
-
     <div class="product">
-      <img src="VESTIDO3.png" alt="Vestido de Gala">
+      <img src="VESTIDO3.png" alt="Vestido">
       <h3>Vestido de Gala</h3>
-      <p>Hecho a mano, seda natural....................</p>
+      <p>Hecho a mano, seda natural.</p>
       <div class="price">$1300</div>
       <button class="buy-btn" onclick="addToCart(1300)">Agregar al carrito</button>
     </div>
 
     <div class="product">
-      <img src="zapatos.png" alt="Zapatos Exclusivos">
+      <img src="zapatos.png" alt="Zapatos">
       <h3>Zapatos Exclusivos</h3>
       <p>Diseño europeo, cuero premium.</p>
       <div class="price">$970</div>
       <button class="buy-btn" onclick="addToCart(970)">Agregar al carrito</button>
     </div>
 
-	    
     <div class="product">
-      <img src="zapato1.png" alt="Zapatos Exclusivos">
+      <img src="zapato1.png" alt="Zapatos">
       <h3>Zapatos Exclusivos</h3>
       <p>Diseño europeo, cuero premium.</p>
       <div class="price">$800</div>
       <button class="buy-btn" onclick="addToCart(800)">Agregar al carrito</button>
     </div>
 
-
     <div class="product">
-      <img src="zapato2.png" alt="Zapatos Exclusivos">
+      <img src="zapato2.png" alt="Zapatos">
       <h3>Zapatos Exclusivos</h3>
       <p>Diseño europeo, cuero premium.</p>
       <div class="price">$970</div>
       <button class="buy-btn" onclick="addToCart(970)">Agregar al carrito</button>
     </div>
-
-
   </div>
 
-
-    <footer>
-
-      <div class="contacto">
-        <img src="whats.png" style="width: 25px" alt="whats">
-        <span>Tel:</span> 221-948-11-96
+  <footer>
+    <div class="contacto">
+      <img src="whats.png" style="width: 25px" alt="WhatsApp">
+      <span>&nbsp;Tel: 221-948-11-96</span>
     </div>
 
     <div class="contacto">
-        <img src="face.png" style="width: 25px" alt="face">
-        <span>facebook:</span> loidalopez
+      <img src="face.png" style="width: 25px" alt="Facebook">
+      <span>&nbsp;Facebook: loidalopez</span>
     </div>
-
-    </footer>
+  </footer>
 
   <script>
     let cartCount = 0;
     let cartTotal = 0;
+    const envio = 50;
 
     function addToCart(price) {
-      cartCount = cartCount + 1;
-      cartTotal = cartTotal + price;
+      cartCount++;
+      cartTotal += price;
+
       document.getElementById("cart-count").innerText = cartCount;
-      document.getElementById("cart-total").innerText = cartTotal;
+      document.getElementById("subtotal").innerText = cartTotal;
+      document.getElementById("envio").innerText = envio;
+      document.getElementById("total").innerText = cartTotal + envio;
     }
   </script>
 
